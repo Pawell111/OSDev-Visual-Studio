@@ -5,6 +5,9 @@
 
 A visual scripting language for OS development. Drag blocks, connect them, and generate a real, bootable C kernel or NASM assembly that runs in QEMU. No deep C or Assembly knowledge required to start learning how an Operating System works.
 
+### DISCLAMER
+**This project was created with AI**
+
 ## Features
 
 - **Visual Node Editor:** A drag-and-drop canvas with an infinite pannable workspace, multi-select, copy/paste, and grid-snapping.
