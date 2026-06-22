@@ -1,6 +1,6 @@
 # OSDev Visual Studio
 <p align="center">
-  <img src="screenshot.png" alt="Project Screenshot" width="500">
+  <img src="screenshot.png" alt="Project Screenshot" width="720">
 </p>
 
 A visual scripting language for OS development. Drag blocks, connect them, and generate a real, bootable C kernel or NASM assembly that runs in QEMU. No deep C or Assembly knowledge required to start learning how an Operating System works.
