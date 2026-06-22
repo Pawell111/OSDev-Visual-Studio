@@ -55,16 +55,20 @@
           "description": "Branches execution. If the condition evaluates to non-zero, the 'true' branch executes. Otherwise, the 'false' branch executes."
         },
         {
-          "name": "If Variable",
-          "description": "Branches execution by comparing a variable to a value."
+          "name": "If Variable (Int)",
+          "description": "Branches execution by comparing an integer variable to a number."
+        },
+        {
+          "name": "If Variable (String)",
+          "description": "Branches execution by comparing a string variable to text."
         },
         {
           "name": "Go to",
           "description": "Jumps execution directly to the block connected to its output. The target block will have a label generated above it in the C code."
         },
         {
-          "name": "Trigger (Cycles)",
-          "description": "Runs independently in the background. Executes its connected chain every X CPU cycles. Does not need to be attached to the Boot block."
+          "name": "Trigger (Background)",
+          "description": "Runs independently in the background via the hardware timer interrupt. Executes its chain continuously while the main OS runs."
         },
         {
           "name": "Wait",
@@ -145,6 +149,10 @@
         {
           "name": "Print Number",
           "description": "Prints the value of an integer variable to the screen."
+        },
+        {
+          "name": "Print String",
+          "description": "Prints the value of a string variable to the screen."
         }
       ]
     },

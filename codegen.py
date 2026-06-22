@@ -177,6 +177,15 @@ void print_string(const char* str) {
     update_cursor(vga_row, vga_col);
 }
 
+// Simple strcmp for If Variable (String) block
+int strcmp(const char* s1, const char* s2) {
+    while (*s1 && (*s1 == *s2)) {
+        s1++;
+        s2++;
+    }
+    return *(const unsigned char*)s1 - *(const unsigned char*)s2;
+}
+
 typedef struct { uint32_t magic, flags, checksum; } multiboot_header_t;
 __attribute__((section(".multiboot"), used))
 multiboot_header_t multiboot_header = { 0x1BADB002, 0x00000000, -(0x1BADB002 + 0x00000000) };
