@@ -1,0 +1,172 @@
+{
+  "categories": [
+    {
+      "name": "Controls",
+      "color": "#ecf0f1",
+      "blocks": [
+        {
+          "name": "Mouse and Keyboard Guide",
+          "description": "Welcome to OSDev Visual Studio!\n\n- Move Block: Left-click and drag a block.\n- Pan Canvas: Click and drag with the Middle Mouse Button.\n- Snap to Grid: Hold Alt while dragging a block to snap it to the 40px grid.\n- Multi-Select: Left-click and drag on empty canvas to draw a selection box.\n- Connect Ports: Click and drag from an output port (right) to an input port (left).\n- Edit Properties: Right-click a block.\n- Delete: Select a block or connection and press Delete or Backspace.\n- Copy/Paste: Select block(s), press Ctrl+C, then Ctrl+V.\n- Toggle Code Preview: Click 'Toggle Code Preview' in the top toolbar."
+        }
+      ]
+    },
+    {
+      "name": "Core",
+      "color": "#c0392b",
+      "blocks": [
+        {
+          "name": "Boot",
+          "description": "The entry point of the OS. The bootloader jumps here. It initializes the VGA text buffer and starts execution. Only one Boot block is allowed per project."
+        }
+      ]
+    },
+    {
+      "name": "I/O",
+      "color": "#2980b9",
+      "blocks": [
+        {
+          "name": "Print",
+          "description": "Outputs text to the screen using VGA text mode. Uses the currently active Text Color and BG Color."
+        },
+        {
+          "name": "Text Color",
+          "description": "Sets the foreground color for all subsequent Print blocks."
+        },
+        {
+          "name": "BG Color",
+          "description": "Sets the background color for all subsequent Print blocks."
+        },
+        {
+          "name": "Clear Screen",
+          "description": "Wipes all text from the VGA buffer and resets the cursor to the top left."
+        }
+      ]
+    },
+    {
+      "name": "Control",
+      "color": "#27ae60",
+      "blocks": [
+        {
+          "name": "Loop",
+          "description": "Repeats the execution flow connected to its 'body' port N times."
+        },
+        {
+          "name": "If",
+          "description": "Branches execution. If the condition evaluates to non-zero, the 'true' branch executes. Otherwise, the 'false' branch executes."
+        },
+        {
+          "name": "If Variable",
+          "description": "Branches execution by comparing a variable to a value."
+        },
+        {
+          "name": "Go to",
+          "description": "Jumps execution directly to the block connected to its output. The target block will have a label generated above it in the C code."
+        },
+        {
+          "name": "Trigger (Cycles)",
+          "description": "Runs independently in the background. Executes its connected chain every X CPU cycles. Does not need to be attached to the Boot block."
+        },
+        {
+          "name": "Wait",
+          "description": "Pauses OS execution for a specified number of CPU cycles."
+        }
+      ]
+    },
+    {
+      "name": "System",
+      "color": "#8e44ad",
+      "blocks": [
+        {
+          "name": "Memory",
+          "description": "Allocates or frees a block of memory using a simple bump allocator."
+        },
+        {
+          "name": "Interrupt",
+          "description": "Registers an Interrupt Service Routine (ISR) for hardware events like the timer or keyboard."
+        }
+      ]
+    },
+    {
+      "name": "Variables",
+      "color": "#16a085",
+      "blocks": [
+        {
+          "name": "Declare Constant",
+          "description": "Declares an integer variable with an initial value."
+        },
+        {
+          "name": "Set Variable",
+          "description": "Updates an integer variable with a value."
+        },
+        {
+          "name": "Get Variable",
+          "description": "Placeholder block to remind you a variable exists."
+        }
+      ]
+    },
+    {
+      "name": "Math / Logic",
+      "color": "#f39c12",
+      "blocks": [
+        {
+          "name": "Add",
+          "description": "Adds A and B. Result is stored in a variable."
+        },
+        {
+          "name": "Subtract",
+          "description": "Subtracts B from A. Result is stored in a variable."
+        },
+        {
+          "name": "Multiply",
+          "description": "Multiplies A and B. Result is stored in a variable."
+        },
+        {
+          "name": "Divide",
+          "description": "Divides A by B. Result is stored in a variable."
+        },
+        {
+          "name": "Compare",
+          "description": "Compares A and B using an operator (==, !=, >, <). Result is 1 (true) or 0 (false). Can be fed to an If block."
+        }
+      ]
+    },
+    {
+      "name": "I/O (Hardware)",
+      "color": "#e74c3c",
+      "blocks": [
+        {
+          "name": "Read String",
+          "description": "Stops execution and reads a string from the keyboard. Stores it in a variable."
+        },
+        {
+          "name": "Read Int",
+          "description": "Stops execution and reads an integer from the keyboard. Stores it in a variable."
+        },
+        {
+          "name": "Print Number",
+          "description": "Prints the value of an integer variable to the screen."
+        }
+      ]
+    },
+    {
+      "name": "Advanced",
+      "color": "#d35400",
+      "blocks": [
+        {
+          "name": "Custom Code",
+          "description": "Allows you to type raw C or Assembly code. Double-click the block to open the editor."
+        }
+      ]
+    },
+    {
+      "name": "Misc",
+      "color": "#7f8c8d",
+      "blocks": [
+        {
+          "name": "Comment",
+          "description": "A sticky note for leaving reminders or explanations. Does not generate any code. Scales to fit your text."
+        }
+      ]
+    }
+  ]
+}

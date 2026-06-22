@@ -1,0 +1,253 @@
+{
+    "nodes": [
+        {
+            "id": 9,
+            "type": "boot",
+            "x": 440.0,
+            "y": 160.0,
+            "w": 150,
+            "h": 64,
+            "properties": {}
+        },
+        {
+            "id": 10,
+            "type": "read_keyboard_int",
+            "x": 1240.0,
+            "y": 160.0,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "var_name": "x"
+            }
+        },
+        {
+            "id": 11,
+            "type": "read_keyboard_int",
+            "x": 1240.0,
+            "y": 280.0,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "var_name": "y"
+            }
+        },
+        {
+            "id": 14,
+            "type": "math_add",
+            "x": 1240.0,
+            "y": 400.0,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "result": "sum",
+                "a": "x",
+                "b": "y"
+            }
+        },
+        {
+            "id": 15,
+            "type": "print_variable",
+            "x": 1440.0,
+            "y": 400.0,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "var_name": "sum",
+                "newline": "True"
+            }
+        },
+        {
+            "id": 18,
+            "type": "print_text",
+            "x": 840,
+            "y": 160,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "text": "Enter the first number:",
+                "newline": "True"
+            }
+        },
+        {
+            "id": 19,
+            "type": "print_text",
+            "x": 840,
+            "y": 280,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "text": "Enter the second number:",
+                "newline": "True"
+            }
+        },
+        {
+            "id": 20,
+            "type": "color_fg",
+            "x": 640,
+            "y": 160,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Green"
+            }
+        },
+        {
+            "id": 21,
+            "type": "color_fg",
+            "x": 1040,
+            "y": 160,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Light Gray"
+            }
+        },
+        {
+            "id": 22,
+            "type": "color_fg",
+            "x": 640,
+            "y": 280,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Green"
+            }
+        },
+        {
+            "id": 23,
+            "type": "color_fg",
+            "x": 1040,
+            "y": 280,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Light Gray"
+            }
+        },
+        {
+            "id": 24,
+            "type": "print_text",
+            "x": 840,
+            "y": 400,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "text": "The result is:",
+                "newline": "True"
+            }
+        },
+        {
+            "id": 25,
+            "type": "color_fg",
+            "x": 640,
+            "y": 400,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Cyan"
+            }
+        },
+        {
+            "id": 26,
+            "type": "color_fg",
+            "x": 1040,
+            "y": 400,
+            "w": 150,
+            "h": 64,
+            "properties": {
+                "color": "Light Gray"
+            }
+        },
+        {
+            "id": 27,
+            "type": "comment",
+            "x": 440,
+            "y": 80,
+            "w": 1257,
+            "h": 40,
+            "properties": {
+                "text": "This is an example of a calculator. You can move around the canvas with your middle mouse button, drag and select with your left mouse button, and edit the editable blocks with a right mouse click."
+            }
+        }
+    ],
+    "connections": [
+        {
+            "from_node": 9,
+            "from_port": "next",
+            "to_node": 20,
+            "to_port": "in"
+        },
+        {
+            "from_node": 20,
+            "from_port": "next",
+            "to_node": 18,
+            "to_port": "in"
+        },
+        {
+            "from_node": 18,
+            "from_port": "next",
+            "to_node": 21,
+            "to_port": "in"
+        },
+        {
+            "from_node": 21,
+            "from_port": "next",
+            "to_node": 10,
+            "to_port": "in"
+        },
+        {
+            "from_node": 10,
+            "from_port": "next",
+            "to_node": 22,
+            "to_port": "in"
+        },
+        {
+            "from_node": 22,
+            "from_port": "next",
+            "to_node": 19,
+            "to_port": "in"
+        },
+        {
+            "from_node": 19,
+            "from_port": "next",
+            "to_node": 23,
+            "to_port": "in"
+        },
+        {
+            "from_node": 23,
+            "from_port": "next",
+            "to_node": 11,
+            "to_port": "in"
+        },
+        {
+            "from_node": 11,
+            "from_port": "next",
+            "to_node": 25,
+            "to_port": "in"
+        },
+        {
+            "from_node": 25,
+            "from_port": "next",
+            "to_node": 24,
+            "to_port": "in"
+        },
+        {
+            "from_node": 24,
+            "from_port": "next",
+            "to_node": 26,
+            "to_port": "in"
+        },
+        {
+            "from_node": 26,
+            "from_port": "next",
+            "to_node": 14,
+            "to_port": "in"
+        },
+        {
+            "from_node": 14,
+            "from_port": "next",
+            "to_node": 15,
+            "to_port": "in"
+        }
+    ]
+}
