@@ -1,7 +1,7 @@
 class IfVariable:
-    name = "If Variable"
+    name = "If Variable (Int)"
     category = "Control"
-    description = "Branches execution by comparing a variable to a value."
+    description = "Branches execution by comparing an integer variable to a number."
     color = "#27ae60"
     inputs = ["in"]
     outputs = ["true", "false"]
